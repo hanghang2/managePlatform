@@ -1,0 +1,30 @@
+.MainView-top{
+    height: 50px;box-sizing: border-box;font-size: 0;
+    .MainView-top-item{
+        display: inline-block;font-size: 15px;position: relative;vertical-align: middle;
+        &:before{
+            content: '';display: block;width: 0;height: 2px;background: #000000;
+            position: absolute;top: 0;transition: width 0.2s;
+            left: calc(50%);transform: translateX(-50%);
+        }
+        &:hover{
+            &:before{
+                width: 100%;
+            }
+        }
+        &.right{float: right;}
+        &.margin20{margin: 0 20px;}
+        input{
+            height: 50px;padding: 0;margin: 0;box-sizing: border-box;border: none;
+            padding-left: 8px;width: 180px;background: none;
+        }
+        .MainView-top-item-message{
+            cursor: pointer;display: inline-block;height: 50px;line-height: 50px;padding: 0 20px;
+            &.marginRight{margin-right: 20px;}
+        }
+        .MainView-top-item-showMenu{
+            cursor: pointer;display: inline-block;height: 50px;line-height: 50px;
+            font-size: 20px;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.page-Pagination{
+    display: block;width: 100%;color: #666666;font-size: 0;
+    .allNum,.pageNumSelect,.pageList,.pageGo{
+        display: inline-block;font-size: 13px;vertical-align: middle;
+    }
+    //总条数
+    .allNum{
+        margin-right: 10px;
+    }
+    //每页条数选择
+    .pageNumSelect{
+        width: 100px;height: 28px;box-sizing: border-box;text-align: center;transition: all 0.5s;
+        border: 1px solid #dcdfe6;border-radius: 3px;line-height: 26px;cursor: pointer;margin-right: 10px;
+        position: relative;
+        &:hover{border-color: #409eff;}
+        &:after{content: '↓';position: absolute;right: 10px;}
+    }
+    //分页list
+    .pageList{
+        font-size: 0;
+        p,li{
+            width: 35px;height: 28px;display: inline-block;font-size: 13px;vertical-align: middle;cursor: pointer;
+            text-align: center;line-height: 28px;font-weight: bold;background-color: #f4f4f5;margin: 0 5px;
+            &:hover{color: #409eff;}
+            &.active{color: #409eff;}
+            &.nohover{cursor: no-drop;}
+            &.next:before,&.prev:before{content: '...';}
+            &.next:hover:before{content: '>>';}
+            &.prev:hover:before{content: '<<';}
+        }
+    }
+//    页面跳转
+    .pageGo{
+        margin-left: 24px;line-height: 28px;
+        .inputGo{
+            margin: 0;padding: 0;vertical-align: middle;width: 50px;height: 28px;text-align: center;
+            color: #666666;
+        }
+    }
+}

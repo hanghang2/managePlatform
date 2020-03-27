@@ -1,0 +1,10 @@
+.Password{
+    min-height: 100%;background: #ffffff;padding: 10px;box-sizing: border-box;
+    input{
+        display: inline-block;
+        width: 200px;height: 40px;
+        box-sizing: border-box;padding-left: 8px;
+        font-size: 14px;border-radius: 4px;border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+}

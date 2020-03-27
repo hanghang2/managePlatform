@@ -1,0 +1,68 @@
+.Style{
+    //遮罩
+    .Style-view{
+        width: 100%;height: 100%;position: fixed;z-index: 998;right: 0;top: 0;
+        background: rgba(0,0,0,0.1);display: none;
+        &.show{
+            display: block;
+        }
+    }
+    //内容
+    .Style-content{
+        height: calc(100% - 50px); width: 390px;background: #ffffff;transition: 0.3s all ease-in;
+        position: fixed;z-index: 1000;top: 50px;right: -390px;border-radius: 2px;overflow-y: auto;
+        &.show{
+            right: 0;box-shadow: 1px 1px 50px rgba(0,0,0,.3);
+        }
+        .sysModelList{//小模块样式
+            box-sizing: border-box;padding: 15px;
+            .sysModel{
+                width: 150px;height: 100px;background: #ffffff;border: 1px solid #c7c7c7;float: left;
+                text-align: center;
+                .sysModel-left{
+                    float: left;width: 50px;height: 100%;
+                    .sysModel-left-head{
+                        width: 100%;height: 25px;background: #20222A;box-sizing: border-box;line-height: 25px;
+                    }
+                    .sysModel-left-main{
+                        width: 100%;height: 75px;background: #20222A;box-sizing: border-box;line-height: 75px;
+                    }
+                }
+                .sysModel-right{
+                    float: left;width: 100px;height: 100%;
+                    .sysModel-right-head{
+                        width: 100%;height: 15px;background: #ffffff;margin-bottom: 10px;box-sizing: border-box;line-height: 15px;
+                    }
+                    .sysModel-right-main{
+                        width: 100%;height: 75px;background: #f6f6f6;box-sizing: border-box;line-height: 75px;
+                    }
+                }
+                &.leftHead .sysModel-left-head,
+                &.leftMain .sysModel-left-main,
+                &.rightHead .sysModel-right-head,
+                &.rightMain .sysModel-right-main{
+                    border:2px transparent solid;
+                    border-image:linear-gradient(to right, #0008fd, #084ffb, #08fbac , #eefd07) 1 10;
+                }
+            }
+            .setValue{
+                float: right;width: 160px;height: 100px;display: flex;
+                flex-direction: column;justify-content: space-between;
+                input{width: 100px;box-sizing: border-box;}
+                &>div{
+                    padding: 10px 0;
+                }
+                .bg{
+                    width: 20px;height: 20px;border: 1px solid #000000;display: inline-block;vertical-align: middle;
+                }
+                span{
+                    vertical-align: middle;
+                }
+                .bg-color{
+                    position: absolute;
+                }
+            }
+            .clearBoth{clear: both; }
+        }
+    }
+}
